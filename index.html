@@ -31,15 +31,23 @@
     overflow: hidden;
     background: var(--green);
   }
+  .banner .stripe-group {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 240px;
+    height: 100%;
+  }
   .banner .stripe {
     position: absolute;
     top: -20%;
-    width: 38%;
+    width: 100px;
     height: 140%;
     transform: skewX(-18deg);
   }
-  .stripe.s1 { left: 8%; background: var(--sky); }
-  .stripe.s2 { left: 38%; background: var(--gold); }
+  .stripe.s1 { left: 0; background: var(--sky); }
+  .stripe.s2 { left: 110px; background: var(--gold); }
   .banner h1 {
     position: relative;
     z-index: 2;
@@ -115,8 +123,10 @@
 <body>
 
 <div class="banner">
-  <div class="stripe s1"></div>
-  <div class="stripe s2"></div>
+  <div class="stripe-group">
+    <div class="stripe s1"></div>
+    <div class="stripe s2"></div>
+  </div>
   <h1>校內資訊連結</h1>
 </div>
 
